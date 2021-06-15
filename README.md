@@ -53,3 +53,4 @@
 
 -   git checkout master
 -   git pull origin master (Kéo đoạn code mới nhất trên github về máy)
+-   git branch -D <BrandName> (Xóa branch đang có trên máy)
