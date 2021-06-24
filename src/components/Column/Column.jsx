@@ -1,30 +1,18 @@
 import React from 'react';
 import './Column.scss';
-import Task from 'components/Task';
+import Card from 'components/Card';
+import { mapOrder } from 'utilities';
 
-const Column = () => {
+const Column = ({ title, cards, cardOrder }) => {
+    const cardsList = mapOrder(cards, cardOrder, 'id');
     return (
         <div className="board">
-            <div className="board__header">Title board</div>
+            <div className="board__header">{title}</div>
             <ul className="board__list">
-                <li className="board__list-item">
-                    <img
-                        alt="todo"
-                        src="https://images.unsplash.com/photo-1522199670076-2852f80289c3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1952&q=80"
-                    />
-                    Title: Todo list
-                </li>
-                <Task />
-                <Task />
-                <Task />
-                <Task />
-                <Task />
-                <Task />
-                <Task />
-                <Task />
-                <Task />
-                <Task />
-                <Task />
+                {cardsList &&
+                    cardsList.map((item, index) => {
+                        return <Card key={index} {...item} />;
+                    })}
             </ul>
             <div className="board__footer">Footer</div>
         </div>
