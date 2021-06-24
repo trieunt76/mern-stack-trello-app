@@ -54,3 +54,19 @@
 -   git checkout master
 -   git pull origin master (Kéo đoạn code mới nhất trên github về máy)
 -   git branch -D <BrandName> (Xóa branch đang có trên máy)
+
+### **3. Clean Architecture Trello**
+
+Create file jsconfig.json
+
+```json
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "es6",
+        "baseUrl": "./src"
+    },
+    "exclude": ["node_modules"],
+    "include": ["src/**/*"]
+}
+```
