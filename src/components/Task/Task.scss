@@ -1,0 +1,17 @@
+.board {
+    &__list {
+        &-item {
+            background-color: #fff;
+            padding: 1.4rem 1rem;
+            margin-bottom: 1rem;
+            border-radius: 0.2rem;
+            box-shadow: 0 0.1rem 0.1rem rgba($color: #0000008a, $alpha: 0.1);
+            &:last-child {
+                margin-bottom: 0;
+            }
+            img {
+                margin: 1rem 0;
+            }
+        }
+    }
+}
